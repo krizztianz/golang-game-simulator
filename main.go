@@ -11,6 +11,8 @@ import (
 
 func main() {
 	var amount int
+	var incVal int = 100
+	var decVal int = 100
 
 	// Clear screen and move cursor to top-left
 	fmt.Print("\033[2J") // Clear screen
@@ -60,9 +62,9 @@ func main() {
 
 		switch r {
 		case 'A', 'a':
-			amount += 100
+			amount += incVal
 		case 'S', 's':
-			amount -= 100
+			amount -= decVal
 		case 'Q', 'q':
 			fmt.Printf("\033[%d;1H\nExiting...\n", promptRow+1)
 			return
